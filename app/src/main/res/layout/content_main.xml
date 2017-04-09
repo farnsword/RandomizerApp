@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.oleksii.randomizerapp.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/txtv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_position"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spin_position"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtv_position"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        android:textSize="32sp"
+        style="@style/Animation.AppCompat.DropDownUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_position" />
+
+    <CheckBox
+        android:id="@+id/chb_position_random"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:onClick="onCheckBoxClick"
+        android:text="@string/chb_random"
+        app:layout_constraintLeft_toRightOf="@+id/spin_position"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_position"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtv_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_attack"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chb_position_random" />
+
+
+    <Spinner
+        android:id="@+id/spin_attack"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtv_position"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        android:textSize="32sp"
+        style="@style/Animation.AppCompat.DropDownUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_attack" />
+
+    <CheckBox
+        android:id="@+id/chb_attack_random"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:onClick="onCheckBoxClick"
+        android:text="@string/chb_random"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/spin_attack"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_attack" />
+
+    <TextView
+        android:id="@+id/txtv_technic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_technic"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chb_attack_random" />
+
+
+    <Spinner
+        android:id="@+id/spin_technic"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtv_position"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        android:textSize="32sp"
+        style="@style/TextAppearance.AppCompat.Widget.DropDownItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_technic" />
+
+    <CheckBox
+        android:id="@+id/chb_technic_random"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:onClick="onCheckBoxClick"
+        android:text="@string/chb_random"
+        app:layout_constraintLeft_toRightOf="@+id/spin_technic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_technic" />
+
+    <TextView
+        android:id="@+id/txtv_weapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_weapon"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chb_technic_random" />
+
+
+    <Spinner
+        android:id="@+id/spin_weapon"
+        android:layout_width="234dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtv_position"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:spinnerMode="dropdown"
+        android:textSize="32sp"
+        style="@style/TextAppearance.AppCompat.Widget.DropDownItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_weapon" />
+
+    <CheckBox
+        android:id="@+id/chb_weapon_random"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:onClick="onCheckBoxClick"
+        android:text="@string/chb_random"
+        app:layout_constraintLeft_toRightOf="@+id/spin_weapon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtv_weapon" />
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_generate"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:onClick="onGenerateButtonClick"
+        />
+
+    <Button
+        android:id="@+id/btn_generate_all_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:text="@string/btn_generate_all_random"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/btn_generate"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onGenerateAllRandomButton"/>
+
+</android.support.constraint.ConstraintLayout>
